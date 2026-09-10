@@ -23,3 +23,17 @@ V2
 - Main AI reel embedded from YouTube.
 - Hero uses the Valeria beach frame.
 - Four current AI project stills included.
+
+
+V3
+- Real email added.
+- LinkedIn added.
+- Lanius Films YouTube destination added.
+- Creative handles added: @laniusfilms, @vex_darkness, @alurathorne.
+
+
+V4
+- Instagram handles are now clickable:
+  @laniusfilms
+  @vex_darkness
+  @alurathorne

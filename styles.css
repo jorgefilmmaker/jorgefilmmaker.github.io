@@ -424,3 +424,25 @@ footer {
   .contact { padding: 90px 20px 60px; }
   footer { padding: 18px 20px 28px; }
 }
+
+
+.social-handles {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.social-handles a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.social-handles a:hover {
+  color: var(--fg);
+  border-bottom-color: rgba(255,255,255,.45);
+}
