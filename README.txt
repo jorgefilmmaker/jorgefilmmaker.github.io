@@ -45,3 +45,8 @@ V5
 - Monochrome inline icons for Email, LinkedIn, YouTube and Instagram.
 - Instagram projects grouped in a cleaner secondary row.
 - Added JS favicon.
+
+
+V5.1 FIX
+- Added cache-busting to CSS/JS.
+- Added explicit SVG dimensions to prevent oversized icons if an old stylesheet is cached.

@@ -542,3 +542,11 @@ footer {
     gap: 12px;
   }
 }
+
+/* Safety fallback for inline contact icons */
+.contact-panel svg {
+  display: block;
+  max-width: 18px;
+  max-height: 18px;
+  overflow: visible;
+}
