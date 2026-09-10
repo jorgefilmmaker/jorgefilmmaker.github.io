@@ -37,3 +37,11 @@ V4
   @laniusfilms
   @vex_darkness
   @alurathorne
+
+
+V5
+- Correct Lanius Films YouTube channel URL.
+- Contact section redesigned.
+- Monochrome inline icons for Email, LinkedIn, YouTube and Instagram.
+- Instagram projects grouped in a cleaner secondary row.
+- Added JS favicon.
