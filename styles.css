@@ -87,9 +87,9 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: -3%;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.28), rgba(0,0,0,.05)),
-    radial-gradient(circle at 70% 38%, rgba(255,255,255,.16), transparent 26%),
-    linear-gradient(145deg, #111 0%, #1c1c1c 38%, #090909 100%);
+    linear-gradient(90deg, rgba(0,0,0,.48), rgba(0,0,0,.12)),
+    url('valeria-beach.jpg') center 42% / cover no-repeat;
+  filter: saturate(.78) contrast(1.04) brightness(.68);
   transform: scale(1.03);
   transition: transform 1.5s cubic-bezier(.2,.7,.2,1);
 }
@@ -275,7 +275,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  filter: saturate(.72) contrast(1.08);
+  filter: saturate(.82) contrast(1.06) brightness(.93);
   transition: transform .6s ease, filter .6s ease;
 }
 
@@ -283,31 +283,27 @@ a { color: inherit; text-decoration: none; }
 
 .project:hover .project-image {
   transform: scale(.995);
-  filter: saturate(1) contrast(1.03);
+  filter: saturate(.98) contrast(1.03) brightness(1);
 }
 
 .image-1 {
-  background:
-    radial-gradient(circle at 72% 56%, rgba(50,110,150,.5), transparent 18%),
-    linear-gradient(175deg, #07131a 0%, #10232d 52%, #030607 100%);
+  background-image: url('protocol.png');
+  background-position: center 43%;
 }
 
 .image-2 {
-  background:
-    radial-gradient(circle at 58% 34%, rgba(226,178,140,.35), transparent 14%),
-    linear-gradient(135deg, #17120e, #3a2b21 48%, #0b0908);
+  background-image: url('valeria-beach.jpg');
+  background-position: center 43%;
 }
 
 .image-3 {
-  background:
-    radial-gradient(circle at 40% 42%, rgba(188,188,188,.15), transparent 11%),
-    linear-gradient(160deg, #161616, #070707 62%, #000);
+  background-image: url('vex-follower.png');
+  background-position: center center;
 }
 
 .image-4 {
-  background:
-    radial-gradient(circle at 68% 28%, rgba(248,215,172,.22), transparent 16%),
-    linear-gradient(140deg, #201c18, #0c0c0b 50%, #15110f);
+  background-image: url('hongkong-ai.png');
+  background-position: center 44%;
 }
 
 .project-meta {

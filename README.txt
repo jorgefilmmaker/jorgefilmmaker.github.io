@@ -16,3 +16,10 @@ Before publishing:
 4. Rename/remove projects as needed.
 
 The design intentionally uses system fonts only, so there are no font licensing or loading issues.
+
+
+V2
+- Real project imagery added.
+- Main AI reel embedded from YouTube.
+- Hero uses the Valeria beach frame.
+- Four current AI project stills included.
