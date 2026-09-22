@@ -7,6 +7,34 @@
   <meta name="description" content="AI Filmmaker · Generative Video · Visual Storytelling" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
  <link rel="stylesheet" href="styles.css?v=5.2" />
+
+  <style>
+    /* Series layout: keep desktop density, give Shorts room on smaller screens. */
+    .series-video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      width: 100%;
+    }
+    .vertical-video { min-width: 0; }
+    .vertical-video iframe { display: block; }
+    @media (min-width: 1280px) {
+      .series-video-grid--vex { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .series-video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .series-video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    }
+    @media (max-width: 600px) {
+      .series-video-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+      .series-heading { gap: 12px; }
+      .series-heading > p { font-size: 11px; line-height: 1.65; letter-spacing: .08em; }
+      .series-description { font-size: 16px; line-height: 1.65; margin: 18px 0 24px; }
+      .series-project { margin-bottom: 48px; }
+    }
+  </style>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -107,7 +135,7 @@
     different environments and moods.
   </p>
 
- <div class="series-video-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;width:100%;">
+ <div class="series-video-grid">
     <div class="vertical-video">
       <iframe
         src="https://www.youtube.com/embed/yGPv1dmWs1Y?rel=0"
@@ -161,7 +189,7 @@
     identity, tone and editorial language.
   </p>
 
-  <div class="series-video-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;width:100%;">
+  <div class="series-video-grid">
     <div class="vertical-video">
       <iframe
         src="https://www.youtube.com/embed/jWVXYVN-Y2I?rel=0"
@@ -215,7 +243,7 @@
     visual formats while maintaining a consistent cinematic identity.
   </p>
 
-  <div class="series-video-grid" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;width:100%;">
+  <div class="series-video-grid series-video-grid--vex">
     <div class="vertical-video">
       <iframe
         src="https://www.youtube.com/embed/BKBIItPhw2w?rel=0"
