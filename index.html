@@ -34,6 +34,16 @@
       .series-description { font-size: 16px; line-height: 1.65; margin: 18px 0 24px; }
       .series-project { margin-bottom: 48px; }
     }
+
+    /* Original-film posters; load each YouTube player only on request. */
+    .video-cover { position: relative; display: block; width: 100%; height: 100%; color: #fff; }
+    .video-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .video-cover::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.72)); pointer-events: none; }
+    .video-cover-label { position: absolute; z-index: 1; bottom: 18px; left: 16px; right: 16px; display: flex; align-items: center; gap: 10px; font: 400 13px/1.35 Arial, sans-serif; }
+    .video-cover-play { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; background: rgba(0,0,0,.25); }
+    .video-cover-play svg { width: 12px; height: 12px; margin-left: 2px; fill: currentColor; }
+    .video-cover:hover .video-cover-play { background: rgba(255,255,255,.2); }
+    .video-cover:focus-visible { outline: 3px solid #fff; outline-offset: -5px; }
   </style>
 </head>
 <body>
@@ -167,39 +177,31 @@
 
  <div class="series-video-grid">
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/yGPv1dmWs1Y?rel=0"
-        title="Alura Thorne AI Cinematic Film 1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=yGPv1dmWs1Y" data-video="yGPv1dmWs1Y" aria-label="Play Costa Brava">
+        <img src="cover-yGPv1dmWs1Y.webp" width="720" height="1280" alt="Costa Brava — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Costa Brava</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/ZMH-33RJoGI?rel=0"
-        title="Alura Thorne AI Cinematic Film 2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=ZMH-33RJoGI" data-video="ZMH-33RJoGI" aria-label="Play Intimate Ritual">
+        <img src="cover-ZMH-33RJoGI.webp" width="720" height="1280" alt="Intimate Ritual — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Intimate Ritual</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/ErSWjEwHEp8?rel=0"
-        title="Alura Thorne AI Cinematic Film 3"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=ErSWjEwHEp8" data-video="ErSWjEwHEp8" aria-label="Play Inside the Room">
+        <img src="cover-ErSWjEwHEp8.webp" width="720" height="1280" alt="Inside the Room — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Inside the Room</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/te0JJL8hJd0?rel=0"
-        title="Alura Thorne AI Cinematic Film 4"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=te0JJL8hJd0" data-video="te0JJL8hJd0" aria-label="Play The Dressing Room">
+        <img src="cover-te0JJL8hJd0.webp" width="720" height="1280" alt="The Dressing Room — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>The Dressing Room</span></span>
+      </a>
     </div>
   </div>
 </article>
@@ -221,39 +223,31 @@
 
   <div class="series-video-grid">
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/jWVXYVN-Y2I?rel=0"
-        title="Valeria Satie AI Cinematic Film 1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=jWVXYVN-Y2I" data-video="jWVXYVN-Y2I" aria-label="Play Sant Joan">
+        <img src="cover-jWVXYVN-Y2I.webp" width="720" height="1280" alt="Sant Joan — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Sant Joan</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/oN-sfSQ3YX4?rel=0"
-        title="Valeria Satie AI Cinematic Film 2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=oN-sfSQ3YX4" data-video="oN-sfSQ3YX4" aria-label="Play Iceland">
+        <img src="cover-oN-sfSQ3YX4.webp" width="720" height="1280" alt="Iceland — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Iceland</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/u4Ar4bxAP8I?rel=0"
-        title="Valeria Satie AI Cinematic Film 3"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=u4Ar4bxAP8I" data-video="u4Ar4bxAP8I" aria-label="Play Madeira">
+        <img src="cover-u4Ar4bxAP8I.webp" width="720" height="1280" alt="Madeira — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Madeira</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/IPgv98j2iPE?rel=0"
-        title="Valeria Satie AI Cinematic Film 4"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=IPgv98j2iPE" data-video="IPgv98j2iPE" aria-label="Play Adriatic Escape">
+        <img src="cover-IPgv98j2iPE.webp" width="720" height="1280" alt="Adriatic Escape — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Adriatic Escape</span></span>
+      </a>
     </div>
   </div>
 </article>
@@ -275,48 +269,38 @@
 
   <div class="series-video-grid series-video-grid--vex">
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/BKBIItPhw2w?rel=0"
-        title="Vex Darkness AI Horror 1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=BKBIItPhw2w" data-video="BKBIItPhw2w" aria-label="Play Cave Record 02">
+        <img src="cover-BKBIItPhw2w.webp" width="720" height="1280" alt="Cave Record 02 — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Cave Record 02</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/d6-8Xs66ecg?rel=0"
-        title="Vex Darkness AI Horror 2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=d6-8Xs66ecg" data-video="d6-8Xs66ecg" aria-label="Play Ghost Kitchen">
+        <img src="cover-d6-8Xs66ecg.webp" width="720" height="1280" alt="Ghost Kitchen — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Ghost Kitchen</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/prTiM81a8KE?rel=0"
-        title="Vex Darkness AI Horror 3"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=prTiM81a8KE" data-video="prTiM81a8KE" aria-label="Play The Follower">
+        <img src="cover-prTiM81a8KE.webp" width="720" height="1280" alt="The Follower — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>The Follower</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/khfO2U9JpjY?rel=0"
-        title="Vex Darkness AI Horror 4"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=khfO2U9JpjY" data-video="khfO2U9JpjY" aria-label="Play El Tunche">
+        <img src="cover-khfO2U9JpjY.webp" width="720" height="1280" alt="El Tunche — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>El Tunche</span></span>
+      </a>
     </div>
 
     <div class="vertical-video">
-      <iframe
-        src="https://www.youtube.com/embed/t280dzX2SHA?rel=0"
-        title="Vex Darkness AI Horror 5"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <a class="video-cover" href="https://www.youtube.com/watch?v=t280dzX2SHA" data-video="t280dzX2SHA" aria-label="Play CERN Incident">
+        <img src="cover-t280dzX2SHA.webp" width="720" height="1280" alt="CERN Incident — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>CERN Incident</span></span>
+      </a>
     </div>
   </div>
 </article>
@@ -450,5 +434,22 @@
   </footer>
 
   <script src="script.js?v=5.1"></script>
+
+  <script>
+    document.querySelectorAll('.video-cover').forEach((cover) => {
+      cover.addEventListener('click', (event) => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const player = document.createElement('iframe');
+        player.src = 'https://www.youtube.com/embed/' + cover.dataset.video + '?autoplay=1&rel=0&playsinline=1';
+        player.title = cover.getAttribute('aria-label').replace(/^Play /, '');
+        player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        player.referrerPolicy = 'strict-origin-when-cross-origin';
+        player.allowFullscreen = true;
+        cover.replaceWith(player);
+        player.focus();
+      });
+    });
+  </script>
 </body>
 </html>
