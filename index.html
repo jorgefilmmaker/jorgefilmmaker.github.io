@@ -138,6 +138,17 @@
     .teaser-intro { max-width: 1040px; margin: 0 auto 24px; }
     .teaser-intro h4 { margin: 0 0 12px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 3vw, 44px); font-weight: 400; line-height: 1.12; }
     .teaser-intro p { max-width: 66ch; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+    /* Keep the latest work visible and earlier films available on demand. */
+    .project-archive { margin-top: 28px; border-top: 1px solid var(--line); }
+    .project-archive summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 0; list-style: none; cursor: pointer; color: var(--muted); font-size: 12px; line-height: 1.5; letter-spacing: .08em; }
+    .project-archive summary::-webkit-details-marker { display: none; }
+    .project-archive summary:hover { color: var(--fg); }
+    .project-archive summary:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+    .archive-toggle::before { content: "+"; font-size: 22px; line-height: 1; }
+    .project-archive[open] .archive-toggle::before { content: "−"; }
+    .archive-content { padding: 6px 0 10px; }
+    .project-archive .collection-label--archive { margin-top: 0; }
   </style>
 </head>
 <body>
@@ -351,7 +362,10 @@
       </a>
     </div>
   </div>
-  <h5 class="collection-label">Cinematic shorts</h5>
+  <details class="project-archive">
+    <summary>View more Alura films<span aria-hidden="true" class="archive-toggle"></span></summary>
+    <div class="archive-content">
+    <h5 class="collection-label">Cinematic shorts</h5>
  <div class="series-video-grid">
     <div class="vertical-video">
       <a class="video-cover" href="https://www.youtube.com/watch?v=yGPv1dmWs1Y" data-video="yGPv1dmWs1Y" aria-label="Play Costa Brava">
@@ -381,6 +395,8 @@
       </a>
     </div>
   </div>
+    </div>
+  </details>
 </article>
 
   <article class="project project-wide series-project" id="valeria">
@@ -419,7 +435,10 @@
       </a>
     </div>
   </div>
-  <h5 class="collection-label collection-label--archive">Travel &amp; earlier films</h5>
+  <details class="project-archive">
+    <summary>View earlier Valeria films<span aria-hidden="true" class="archive-toggle"></span></summary>
+    <div class="archive-content">
+    <h5 class="collection-label collection-label--archive">Travel &amp; earlier films</h5>
   <div class="series-video-grid">
     <div class="vertical-video">
       <a class="video-cover" href="https://www.youtube.com/watch?v=jWVXYVN-Y2I" data-video="jWVXYVN-Y2I" aria-label="Play Sant Joan">
@@ -449,6 +468,8 @@
       </a>
     </div>
   </div>
+    </div>
+  </details>
 </article>
 
       <article class="project project-wide series-project">
