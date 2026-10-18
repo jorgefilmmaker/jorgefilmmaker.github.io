@@ -149,6 +149,18 @@
     .project-archive[open] .archive-toggle::before { content: "−"; }
     .archive-content { padding: 6px 0 10px; }
     .project-archive .collection-label--archive { margin-top: 0; }
+
+    @media (min-width: 901px) { #alura .project-archive .series-video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    /* Pair the widescreen trailer with one portrait film. */
+    #alura .alura-trailer { display: block; max-width: 1120px; margin-inline: auto; }
+    #alura .trailer-copy { margin-bottom: 24px; }
+    #alura .trailer-copy .series-description { max-width: 60ch; margin: 12px 0; }
+    .alura-featured-media { display: grid; grid-template-columns: minmax(0, 256fr) minmax(0, 81fr); gap: 28px; align-items: start; }
+    .alura-featured-media > div { min-width: 0; }
+    @media (max-width: 900px) {
+      .alura-featured-media { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+      .alura-featured-media > .vertical-video { width: min(100%, 300px); }
+    }
   </style>
 </head>
 <body>
@@ -355,11 +367,19 @@
       <p class="series-description">An introduction to the cinematic world of Alura Thorne.</p>
       <a class="project-video-link" href="https://www.youtube.com/watch?v=97rAzkZPVqM" target="_blank" rel="noopener noreferrer">Watch the trailer on YouTube ↗</a>
     </div>
-<div class="reel-frame">
+<div class="alura-featured-media">
+    <div class="reel-frame">
       <a class="video-cover" href="https://www.youtube.com/watch?v=97rAzkZPVqM" data-video="97rAzkZPVqM" aria-label="Play Alura Thorne — Come Closer">
         <img src="cover-97rAzkZPVqM.webp" width="1280" height="720" alt="Alura Thorne — Come Closer — official cover" loading="lazy" decoding="async">
         <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Alura Thorne — Come Closer</span></span>
       </a>
+    </div>
+    <div class="vertical-video">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=ZMH-33RJoGI" data-video="ZMH-33RJoGI" aria-label="Play Intimate Ritual">
+        <img src="cover-ZMH-33RJoGI.webp" width="720" height="1280" alt="Intimate Ritual — film still" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Intimate Ritual</span></span>
+      </a>
+    </div>
     </div>
   </div>
   <details class="project-archive">
@@ -374,12 +394,7 @@
       </a>
     </div>
 
-    <div class="vertical-video">
-      <a class="video-cover" href="https://www.youtube.com/watch?v=ZMH-33RJoGI" data-video="ZMH-33RJoGI" aria-label="Play Intimate Ritual">
-        <img src="cover-ZMH-33RJoGI.webp" width="720" height="1280" alt="Intimate Ritual — film still" loading="lazy" decoding="async">
-        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Intimate Ritual</span></span>
-      </a>
-    </div>
+    
 
     <div class="vertical-video">
       <a class="video-cover" href="https://www.youtube.com/watch?v=ErSWjEwHEp8" data-video="ErSWjEwHEp8" aria-label="Play Inside the Room">
