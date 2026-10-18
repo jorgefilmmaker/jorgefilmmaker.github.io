@@ -162,6 +162,17 @@
     }
     .teaser-intro p + p { margin-top: 12px; }
     #alura { max-width: 1120px; }
+
+    /* One shared alignment for selected projects and their media. */
+    #work { padding-inline: max(20px, calc((100% - 1160px) / 2)); }
+    #work > .project { max-width: 100%; }
+    #work #alura .alura-trailer { max-width: none; }
+    #work #valeria .valeria-sessions { max-width: none; }
+    #work > .about { padding-inline: 0; }
+    .hero-content { min-width: 0; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: clamp(58px, 20vw, 118px); }
+    }
   </style>
 </head>
 <body>
