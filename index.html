@@ -97,6 +97,41 @@
       .featured-films > .project { display: block; grid-row: auto; }
     }
   #nocturne { max-width:1040px; margin:0 auto 56px; }
+
+    /* Project collections: preserve each film's native aspect ratio. */
+    #alura, #valeria { width: 100%; max-width: 1280px; margin-inline: auto; margin-bottom: 64px; }
+    #nocturne { width: 100%; max-width: 1160px; margin-bottom: 64px; }
+    :is(#alura, #valeria, #nocturne) { scroll-margin-top: 90px; }
+    :is(#alura, #valeria, #nocturne) .series-heading { flex-wrap: wrap; gap: 16px 28px; }
+    :is(#alura, #valeria, #nocturne) .series-heading h4 { font-size: clamp(32px, 3.2vw, 48px); line-height: 1.12; }
+    .collection-label { margin: 0 0 16px; color: var(--muted); font-size: 10px; font-weight: 400; letter-spacing: .15em; line-height: 1.6; text-transform: uppercase; }
+    .collection-label--archive { margin-top: 36px; }
+    .valeria-sessions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: 1080px; margin-inline: auto; }
+    .alura-trailer { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 36px; align-items: center; margin: 28px 0 32px; }
+    .trailer-copy h5 { margin: 0; font: 400 clamp(30px, 3vw, 44px)/1.1 Georgia, 'Times New Roman', serif; }
+    .trailer-copy .series-description { margin: 16px 0 20px; max-width: 32ch; }
+    .project-video-link { font-size: 13px; line-height: 1.6; color: var(--muted); }
+    .project-video-link:hover, .project-video-link:focus-visible { color: var(--fg); text-decoration: underline; text-underline-offset: 4px; }
+    .nocturne-editions { display: grid; grid-template-columns: minmax(0, 256fr) minmax(0, 81fr); gap: 28px; align-items: start; }
+    .nocturne-editions > div { min-width: 0; }
+    .alura-trailer .reel-frame, .nocturne-editions .reel-frame { min-width: 0; width: 100%; }
+    @media (max-width: 900px) {
+      .alura-trailer { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+      .trailer-copy .series-description { max-width: 55ch; }
+      .nocturne-editions { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+      .nocturne-editions > div:last-child { width: min(100%, 300px); }
+    }
+    @media (max-width: 600px) {
+      .valeria-sessions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      #valeria .series-video-grid, #alura .series-video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      :is(#alura, #valeria) .video-cover-label { font-size: 11px; left: 10px; right: 10px; bottom: 12px; gap: 6px; }
+      :is(#alura, #valeria) .video-cover-play { width: 28px; height: 28px; flex-basis: 28px; }
+      .collection-label--archive { margin-top: 28px; }
+      #alura, #valeria, #nocturne { margin-bottom: 48px; }
+    }
+    @media (max-width: 360px) {
+      .valeria-sessions, #valeria .series-video-grid, #alura .series-video-grid { grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -256,13 +291,27 @@
     <p>Concept · Direction · Generative Production · Editing · Post</p>
   </div>
   <p class="series-description">A cinematic fragrance spec film exploring desire, freedom and a little danger after dark. Created through generative AI and shaped through editing, colour and sound.</p>
-  <div class="reel-frame">
+  <div class="nocturne-editions">
+    <div>
+      <h5 class="collection-label">Original film · 16:9</h5>
+      <div class="reel-frame">
     <iframe src="https://www.youtube.com/embed/h940Uvh2X5c?rel=0" title="NOCTURNE — Scent of the Night | AI Fragrance Spec Film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+    </div>
+    <div>
+      <h5 class="collection-label">Short · 9:16</h5>
+      <div class="vertical-video">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=xiagdFylT-A" data-video="xiagdFylT-A" aria-label="Play NOCTURNE — Scent of the Night">
+        <img src="cover-xiagdFylT-A.webp" width="405" height="720" alt="NOCTURNE — Scent of the Night — official cover" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>NOCTURNE — Scent of the Night</span></span>
+      </a>
+    </div>
+    </div>
   </div>
   <p class="series-description"><a href="https://www.youtube.com/watch?v=h940Uvh2X5c" target="_blank" rel="noopener noreferrer">Watch NOCTURNE on YouTube ↗</a></p>
 </article>
 
-<article class="project project-wide series-project">
+<article class="project project-wide series-project" id="alura">
   <div class="series-heading">
     <div>
       <p class="project-type">AI CHARACTER / CINEMATIC SERIES</p>
@@ -277,6 +326,21 @@
     different environments and moods.
   </p>
 
+  <div class="alura-trailer">
+    <div class="trailer-copy">
+      <p class="collection-label">Official trailer · 16:9</p>
+      <h5>Come Closer</h5>
+      <p class="series-description">An introduction to the cinematic world of Alura Thorne.</p>
+      <a class="project-video-link" href="https://www.youtube.com/watch?v=97rAzkZPVqM" target="_blank" rel="noopener noreferrer">Watch the trailer on YouTube ↗</a>
+    </div>
+<div class="reel-frame">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=97rAzkZPVqM" data-video="97rAzkZPVqM" aria-label="Play Alura Thorne — Come Closer">
+        <img src="cover-97rAzkZPVqM.webp" width="1280" height="720" alt="Alura Thorne — Come Closer — official cover" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Alura Thorne — Come Closer</span></span>
+      </a>
+    </div>
+  </div>
+  <h5 class="collection-label">Cinematic shorts</h5>
  <div class="series-video-grid">
     <div class="vertical-video">
       <a class="video-cover" href="https://www.youtube.com/watch?v=yGPv1dmWs1Y" data-video="yGPv1dmWs1Y" aria-label="Play Costa Brava">
@@ -308,10 +372,10 @@
   </div>
 </article>
 
-  <article class="project project-wide series-project">
+  <article class="project project-wide series-project" id="valeria">
   <div class="series-heading">
     <div>
-      <p class="project-type">DIGITAL CHARACTER / CINEMATIC TRAVEL</p>
+      <p class="project-type">DIGITAL CHARACTER / FASHION &amp; TRAVEL</p>
       <h4>Valeria Satie</h4>
     </div>
     <p>Character Consistency · Generative Video · Editing · Post</p>
@@ -323,6 +387,28 @@
     identity, tone and editorial language.
   </p>
 
+  <h5 class="collection-label">Fashion films · Sessions 01—03</h5>
+  <div class="valeria-sessions">
+<div class="vertical-video">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=mIppZI_FBTA" data-video="mIppZI_FBTA" aria-label="Play Valeria Satie — Session 01">
+        <img src="cover-mIppZI_FBTA.webp" width="405" height="720" alt="Valeria Satie — Session 01 — official cover" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Valeria Satie — Session 01</span></span>
+      </a>
+    </div>
+<div class="vertical-video">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=oXF-xJfsDTw" data-video="oXF-xJfsDTw" aria-label="Play Valeria Satie — Session 02">
+        <img src="cover-oXF-xJfsDTw.webp" width="405" height="720" alt="Valeria Satie — Session 02 — official cover" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Valeria Satie — Session 02</span></span>
+      </a>
+    </div>
+<div class="vertical-video">
+      <a class="video-cover" href="https://www.youtube.com/watch?v=UGk3CSBFAs8" data-video="UGk3CSBFAs8" aria-label="Play Valeria Satie — Session 03">
+        <img src="cover-UGk3CSBFAs8.webp" width="405" height="720" alt="Valeria Satie — Session 03 — official cover" loading="lazy" decoding="async">
+        <span class="video-cover-label"><span class="video-cover-play" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 1L11 6 2 11Z"/></svg></span><span>Valeria Satie — Session 03</span></span>
+      </a>
+    </div>
+  </div>
+  <h5 class="collection-label collection-label--archive">Travel &amp; earlier films</h5>
   <div class="series-video-grid">
     <div class="vertical-video">
       <a class="video-cover" href="https://www.youtube.com/watch?v=jWVXYVN-Y2I" data-video="jWVXYVN-Y2I" aria-label="Play Sant Joan">
