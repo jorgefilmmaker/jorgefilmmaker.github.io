@@ -51,7 +51,7 @@
     .video-cover:hover .video-cover-play { background: rgba(255,255,255,.2); }
     .video-cover:focus-visible { outline: 3px solid #fff; outline-offset: -5px; }
     /* Compact showreel and paired featured films. */
-    #reel { padding-bottom: 36px; }
+    #reel { padding-top: 48px; padding-bottom: 36px; scroll-margin-top: 80px; }
     #reel > .section-head, #reel > .reel-frame {
       max-width: 1040px;
       margin-inline: auto;
@@ -132,6 +132,12 @@
     @media (max-width: 360px) {
       .valeria-sessions, #valeria .series-video-grid, #alura .series-video-grid { grid-template-columns: minmax(0, 1fr); }
     }
+
+    /* Context for the fictional-concept teaser. */
+    #reel > .section-head { margin-bottom: 24px; }
+    .teaser-intro { max-width: 1040px; margin: 0 auto 24px; }
+    .teaser-intro h4 { margin: 0 0 12px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 3vw, 44px); font-weight: 400; line-height: 1.12; }
+    .teaser-intro p { max-width: 66ch; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -182,8 +188,13 @@
     <section class="reel" id="reel">
       <div class="section-head">
         <span>01</span>
-        <h3>Showreel</h3>
+        <h3>Teaser</h3>
         <span>2026</span>
+      </div>
+
+      <div class="teaser-intro">
+        <h4>AI Filmmaking Teaser</h4>
+        <p>An exploration of cinematic imagery and fictional brand concepts, created with generative AI.</p>
       </div>
 
       <div class="reel-frame">
