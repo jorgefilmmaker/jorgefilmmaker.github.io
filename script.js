@@ -1,28 +1,33 @@
-// Tiny cinematic parallax / reveal
-const hero = document.querySelector('.hero-image');
-
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  if (hero && y < window.innerHeight * 1.2) {
-    hero.style.transform = `translateY(${y * 0.08}px) scale(1.05)`;
-  }
+// Load a YouTube player only after an explicit request; keep one active at a time.
+let activeVideo = null;
+function restoreVideo(moveFocus = false) {
+  if (!activeVideo) return;
+  const { frame, cover } = activeVideo;
+  frame.replaceChildren(cover);
+  activeVideo = null;
+  if (moveFocus) cover.focus();
+}
+document.addEventListener('click', (event) => {
+  const cover = event.target.closest('a.video-cover[data-video]');
+  if (!cover || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const videoId = cover.dataset.video;
+  if (!/^[\w-]{11}$/.test(videoId)) return;
+  event.preventDefault();
+  restoreVideo();
+  const frame = cover.parentElement;
+  const player = document.createElement('iframe');
+  player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1`;
+  player.title = cover.getAttribute('aria-label').replace(/^Play /, '');
+  player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  player.referrerPolicy = 'strict-origin-when-cross-origin';
+  player.allowFullscreen = true;
+  const close = document.createElement('button');
+  close.className = 'close-player';
+  close.type = 'button';
+  close.textContent = '×';
+  close.setAttribute('aria-label', 'Close video');
+  close.addEventListener('click', () => restoreVideo(true));
+  frame.replaceChildren(player, close);
+  activeVideo = { frame, cover };
+  close.focus();
 });
-
-const items = document.querySelectorAll('.project, .statement, .about-grid, .reel-frame');
-
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('is-visible');
-  });
-}, { threshold: 0.12 });
-
-items.forEach((el) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity .8s ease, transform .8s ease';
-  io.observe(el);
-});
-
-const style = document.createElement('style');
-style.textContent = `.is-visible{opacity:1!important;transform:translateY(0)!important}`;
-document.head.appendChild(style);
