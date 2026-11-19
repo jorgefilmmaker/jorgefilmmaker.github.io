@@ -737,3 +737,6 @@ button{font:inherit}
 .serein-media .serein-still{aspect-ratio:auto;border:0;overflow:visible;background:transparent}
 .serein-still img{aspect-ratio:9/16;height:auto;border:1px solid var(--line);background:#101010}
 @media(max-width:700px){.work-index{gap:10px 20px;margin-bottom:28px}.project-note{font-size:14px}.film-description{font-size:14px}}
+
+.hero .hero-experience{display:block;margin-top:10px;font-size:11px;line-height:1.5;letter-spacing:.025em;text-transform:none;color:rgba(255,255,255,.68)}
+@media(max-width:700px){.hero .hero-experience{font-size:10px;max-width:290px;margin-top:9px}}
