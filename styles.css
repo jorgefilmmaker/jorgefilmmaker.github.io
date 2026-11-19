@@ -656,7 +656,7 @@ button{font:inherit}
 .project-credit{font-size:10px;line-height:1.7;letter-spacing:.07em;color:var(--muted);margin:18px 0}
 .series-description{max-width:650px;font-size:14px;line-height:1.7;margin:16px 0 26px}
 .campaign-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
-.campaign-grid .series-description{min-height:3.4em}
+.campaign-grid .series-description{min-height:5.1em}
 .reel-frame,.vertical-video{position:relative;display:block;width:100%;height:auto;border:1px solid #f1efe915;min-width:0;background:#101010;overflow:hidden}
 .reel-frame{aspect-ratio:16/9}.vertical-video{aspect-ratio:9/16}
 .reel-frame iframe,.vertical-video iframe{display:block;position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -725,3 +725,15 @@ button{font:inherit}
 .serein-media>.vertical-video{width:100%;margin:0}
 @media(max-width:1100px){.serein-feature{grid-template-columns:1fr;gap:24px}}
 @media(max-width:700px){.serein-media{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.serein-media>.vertical-video{grid-column:1/-1;width:min(260px,100%);justify-self:center}}
+
+/* Concise editorial context within the existing continuous portfolio. */
+.work-index{display:flex;flex-wrap:wrap;gap:12px 28px;margin:0 0 36px;font-size:12px;color:var(--muted)}
+.work-index a{padding:6px 0;border-bottom:1px solid var(--line)}
+.project-note{max-width:80ch;font-size:14px;line-height:1.75;color:var(--muted);margin:20px 0 26px}
+.film-description{font-size:14px;line-height:1.65;color:var(--muted);margin:12px 0 0;max-width:48ch}
+.project-stills figcaption,.serein-still figcaption{font-size:12px;line-height:1.5;color:var(--muted);padding:10px 0}
+.stills-grid figure{background:transparent;border:0}
+.stills-grid img{border:1px solid var(--line);background:#101010}
+.serein-media .serein-still{aspect-ratio:auto;border:0;overflow:visible;background:transparent}
+.serein-still img{aspect-ratio:9/16;height:auto;border:1px solid var(--line);background:#101010}
+@media(max-width:700px){.work-index{gap:10px 20px;margin-bottom:28px}.project-note{font-size:14px}.film-description{font-size:14px}}

@@ -8,6 +8,19 @@ function restoreVideo(moveFocus = false) {
   if (moveFocus) cover.focus();
 }
 document.addEventListener('click', (event) => {
+  const shortcut = event.target.closest('a[data-play-target]');
+  if (shortcut && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+    const frame = document.getElementById(shortcut.dataset.playTarget);
+    const target = frame?.querySelector('a.video-cover[data-video]');
+    if (target || frame?.querySelector('iframe')) {
+      event.preventDefault();
+      frame.scrollIntoView({block:'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+      if (target) target.click();
+      else frame.querySelector('button, iframe')?.focus();
+      return;
+    }
+  }
+
   const cover = event.target.closest('a.video-cover[data-video]');
   if (!cover || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   const videoId = cover.dataset.video;
