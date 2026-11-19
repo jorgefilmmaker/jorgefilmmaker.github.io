@@ -756,3 +756,26 @@ button{font:inherit}
 @media (max-width: 700px) {
   .hero-image { background-position: 69% 42%; }
 }
+
+/* Refine the existing coastal hero framing and readability. */
+.hero-image {
+  inset: 0;
+  background-size: cover;
+  background-position: 50% 0%;
+  transform: none;
+  filter: saturate(.88) contrast(1.02) brightness(1.02);
+}
+.hero:hover .hero-image { transform: none; }
+.hero-shadow {
+  background:
+    linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.14) 44%, rgba(0,0,0,.03) 80%),
+    linear-gradient(to right, rgba(0,0,0,.42), transparent 64%);
+}
+.hero .hero-experience { font-size: 12px; color: rgba(255,255,255,.86); }
+@media (min-width: 1600px) {
+  .hero-image { background-size: 100% auto; }
+}
+@media (max-width: 700px) {
+  .hero-image { background-size: auto 100%; background-position: 72% 0%; }
+  .hero .hero-experience { font-size: 11px; }
+}
