@@ -705,3 +705,14 @@ button{font:inherit}
 
 @media(max-width:700px){.flagship-project h4{font-size:44px}.serein-feature h4{font-size:28px}}
 @media(max-width:420px){.serein-feature{grid-template-columns:1fr}.serein-feature>.vertical-video{width:160px}}
+
+/* Original project stills, using the portfolio's existing spacing and palette. */
+.project-stills{margin:26px 0 36px}
+.project-stills>.project-type{margin:0 0 14px}
+.stills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stills-grid figure{margin:0;min-width:0;background:#101010;border:1px solid var(--line)}
+.stills-grid img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.stills-grid.portrait-stills{grid-template-columns:repeat(4,minmax(0,1fr))}
+.portrait-stills img{aspect-ratio:auto}
+.consistency-stills .project-stills{margin:10px 0 24px}
+@media(max-width:700px){.stills-grid{grid-template-columns:1fr;gap:14px}.stills-grid.portrait-stills{grid-template-columns:repeat(2,minmax(0,1fr))}}
