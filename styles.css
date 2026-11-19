@@ -740,3 +740,19 @@ button{font:inherit}
 
 .hero .hero-experience{display:block;margin-top:10px;font-size:11px;line-height:1.5;letter-spacing:.025em;text-transform:none;color:rgba(255,255,255,.68)}
 @media(max-width:700px){.hero .hero-experience{font-size:10px;max-width:290px;margin-top:9px}}
+
+/* Approved Jorge Sánchez portfolio coastal hero. Append at the END of styles.css. */
+.hero-image {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.48), rgba(0,0,0,.12)),
+    url('jorge-hero-coast.webp') 50% 42% / cover no-repeat;
+  filter: saturate(.88) contrast(1.02) brightness(.96);
+}
+.hero-shadow {
+  background:
+    linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.20) 44%, rgba(0,0,0,.06) 80%),
+    linear-gradient(to right, rgba(0,0,0,.42), transparent 64%);
+}
+@media (max-width: 700px) {
+  .hero-image { background-position: 69% 42%; }
+}
